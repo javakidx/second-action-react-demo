@@ -1,5 +1,6 @@
 name: Test Flow
-on: push:
+on:
+  push
   #   branches:
   #     - main
   # pull_request:
@@ -14,9 +15,8 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install dependencies
         run: npm ci
       - name: Run Test
         run: npm test
-        
